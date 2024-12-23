@@ -1,0 +1,139 @@
+
+.aside_panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+    max-width: 15.5rem;
+    height: '100%';
+    background-color: var(--main-color);
+    font-family: 'Poppins';
+    color: #fff8;
+}
+.logo_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0005;
+    padding: 1rem;
+}
+.logo{
+    font-size: 2rem;
+    font-weight: 800;
+}
+.logo_wrapper svg {
+    height: 2.5rem;
+}
+#main {
+    width: 90%;
+    max-width: calc(100% - 15.5rem);
+    position: absolute;
+    top: 0;
+    padding: 1rem;
+    right: 0;
+}
+.back_to_top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #6b6bff;
+    color: #fff;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 10px;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+.back_to_top::after,
+.back_to_top::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0005;
+    transition: all .3s ease-in-out;
+    transform: translateY(100%);
+}
+.back_to_top::before {
+    transition:  all .3s ease-in-out 0.3;
+}
+.back_to_top * {
+    font-size: 1.3rem;
+}
+.back_to_top:hover::after{
+    transform: translateY(-100%);
+}
+.back_to_top:hover::before{
+    transform: translateY(0%);
+}
+
+/* ============= ASIDE =========== */
+.dashboard_title {
+    background-color: #0002;
+    margin-block: 2rem;
+    padding-block: 1rem !important;
+}
+.dashboard_element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1.5rem;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+.dashboard_arrow, .dashboard_icon {
+    width: 10%;
+    margin-bottom: -0.3rem;
+}
+.dashboard_icon,
+.dashboard_arrow {
+    font-size: 1.2rem;
+    transition: all .2s ease-in-out;
+}
+.dashboard_icon *{
+    font-size: 1.2rem;
+}
+
+.dashboard_element .dashboard_text {
+    transition: all .2s ease-in-out;
+    width: 90%;
+    padding-left: 0.4rem;
+}
+.dashboard_element:hover {
+    background-color: #0002;
+}
+.dashboard_title:hover {
+    background-color: #0003;
+}
+.dashboard_element:hover .dashboard_icon {
+    color: #6b6bff;
+    transform: scale(1.2);
+}
+.dashboard_element:hover .dashboard_arrow {
+    transform: rotate(90deg);
+    color: #fff;
+}
+.dashboard_element:hover .dashboard_text {
+    color: #fff;
+}
+.dashboard_logout {
+    color: crimson;
+}
+.dashboard_logout .dashboard_icon{
+    transform: rotate(180deg);
+    margin-bottom: 0;
+    margin-top: -0.3rem;
+}
+.dashboard_logout:hover *{
+    color: crimson !important;
+}
+.dashboard_logout:hover .dashboard_icon{
+    transform: rotate(180deg) scale(1.2);
+}

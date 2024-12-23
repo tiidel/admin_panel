@@ -1,0 +1,42 @@
+.title {
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.bold-text {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.616);
+}
+
+.center-text {
+  text-align: center;
+}
+
+.small {
+  font-size: 0.9em;
+}
+
+.large {
+  font-size: 1.2em;
+}
+
+.container {
+  width: 93%;
+  margin: auto;
+  max-width: 140.5rem;
+}
+
+.organisation_wrapper {
+  min-height: 70vh;
+}
+
+
+
+
+.class_fetch_data_loader {
+  padding: 2rem;
+}
+
+.class_fetch_data_loader * {
+  stroke: #000;
+}
