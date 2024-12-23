@@ -1,0 +1,27 @@
+
+/* ====== LIST CONTROLER =========== */
+.list_controller {
+    width: 100%;
+    max-width: 270px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    margin-inline: auto 0rem;
+    margin-bottom: 5rem;
+}
+
+.list_control_btn {
+    width: 25%;
+    background-color: orange;
+    border-radius: 4px;
+    padding: 0.4rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in-out;
+}
+.list_control_btn:hover {
+    background-color: rgb(206, 135, 4);
+}
+

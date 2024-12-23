@@ -3,6 +3,15 @@
   font-size: 1.5em;
 }
 
+input,
+textarea,
+select {
+  border: none;
+  padding: 0.5rem;
+  outline: none;
+  width: 100%;
+}
+
 .bold-text {
   font-weight: 600;
   color: rgba(0, 0, 0, 0.616);
@@ -39,4 +48,67 @@
 
 .class_fetch_data_loader * {
   stroke: #000;
+}
+
+
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+thead th{
+  font-weight: 600;
+  color: var(--main-color);
+  text-transform: capitalize;
+  text-align: left !important;
+}
+
+thead {
+  background-color: #00008046;
+}
+
+td, th {
+  text-align: left;
+  padding: 9px;
+}
+td {
+  font-size: 0.85rem;
+  color: #696969;
+}
+tr:nth-child(even) {
+  background-color: #dddddd98;
+}
+tr {
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+tr:hover {
+  background-color: #0002;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #fff;
+  background-color: var(--main-color);
+}
+
+.fetching_loader {
+  margin: auto;
+  width: 60px;
+
+}
+.fetching_loader svg path{
+  fill: #000 !important;
 }

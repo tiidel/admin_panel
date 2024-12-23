@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router';
 import Sidebar from '../includes/sidebar/Sidebar';
 import Nav from '../includes/nav/Nav';
 import Dashboard from '../Dashboard/Dashboard';
+import Accounts from '../Account/Accounts';
 
 const AdminApp = () => {
     const [logoutModal, setLogoutModal] = useState(false);
@@ -24,6 +25,8 @@ const AdminApp = () => {
       <main id='main'>
         <Nav category_list={category_list} handleRemoveAuthModal={logoutModalController} />
           <Routes>
+
+            <Route path='/users' element={<Accounts />} />
 
             <Route path='/' element={<Dashboard />} />
           </Routes>
