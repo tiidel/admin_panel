@@ -1,0 +1,419 @@
+.authenticate {
+        background-color: #F8F8F8;
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        padding-bottom: 1rem;
+        overflow-y: scroll;
+        height: 100%;
+        z-index: 1000;
+}
+
+.auth_logo {
+        font-size: 1.6em !important;
+        margin-bottom: 1rem;
+        text-align: center;
+}
+
+.authenticate_form .title {
+        margin-bottom: 0.5rem;
+}
+
+.authenticate_form {
+        min-height: auto;
+        min-height: 50vh;
+        width: 90vw;
+        max-width: 35rem;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0px 0px 20px 0px #d2d6d691;
+        position: relative;
+        margin-left: 1rem;
+        z-index: 2;
+        margin-block: 4rem;
+        position: relative;
+}
+
+.authenticate_form .company_name {
+        background-color: var(--main-color-dark);
+        position: absolute;
+        top: 30%;
+        left: 0%;
+        border-radius: 4px 4px 0px 0px;
+        color: #fff;
+        padding: 0.2rem 2rem;
+        font-weight: 500;
+        font-family: 'Montserrat';
+        transform: translate(-57%, 0%) rotate(-90deg);
+}
+
+.inputflex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.sides {
+        width: 48%;
+        height: 4rem;
+}
+
+.nameWrapper {
+        margin-top: 1rem;
+}
+
+.auth_textarea {
+        resize: none;
+        height: 10rem;
+}
+
+.auth_input {
+        width: 100%;
+        border: 1px solid #d2d6d691;
+        padding: 0.5rem;
+        border-radius: 4px;
+        margin-top: .5rem;
+}
+
+.auth_input.input_alert {
+        border: 1px solid crimson;
+        color: crimson;
+        background-color: rgba(220, 20, 60, 0.185);
+}
+
+.auth_input.input_alert.success {
+        border: 1px solid rgb(103, 190, 77);
+        color: rgb(103, 190, 77);
+        background-color: rgba(103, 190, 77, 0.185);
+}
+
+.nameWrapper.success .auth_input.input_alert {
+        border: 1px solid rgb(60, 163, 78);
+        color: rgb(60, 163, 78);
+        background-color: rgba(60, 163, 78, 0.185);
+}
+
+.auth_submit_btn {
+        background-color: var(--main-color);
+        color: #fff;
+        font-weight: 500;
+        border: none;
+        padding: 0px;
+        font-size: 1.2em;
+        cursor: pointer;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.auth_submit_btn .btn_svg {
+        height: 100%;
+        width: 1.4rem;
+        margin-left: 1rem;
+}
+
+.auth_submit_btn .btn_svg svg {
+        height: 100%;
+}
+
+.signupBtn {
+        position: relative;
+        margin-top: 3rem;
+        border-top: 0.4px solid var(--gray);
+        padding-block: 2rem;
+}
+
+.or {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 1rem;
+}
+
+.authBtn {
+        width: 100%;
+        height: 40px;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 4px;
+        border: 1px solid #d2d6d691;
+        display: flex;
+        align-items: center;
+        padding: 0.2rem 1rem;
+        margin-top: 1.5rem;
+        transition: all .3s ease-in-out;
+}
+
+.authBtn.facebook {
+        background-color: #0266FF;
+}
+
+.authBtn.linkedin {
+        background-color: #1883BB;
+}
+
+.authBtn.google {
+        background-color: #f0f0f0;
+        /* Light grey background */
+}
+
+.login_btn_text {
+        font-weight: 600;
+        font-family: "Outfit", system-ui;
+        color: #fff;
+}
+
+
+.authBtn:hover {
+        /* background-color: ; */
+}
+
+.oauthBtnImg {
+        height: 90%;
+        overflow: hidden;
+        border-radius: 5px;
+        background-color: transparent;
+        cursor: pointer;
+        margin: 0px;
+        padding: 0px;
+        display: block;
+        margin-right: 1rem;
+}
+
+.pre_auth {
+        display: flex;
+        justify-content: space-between;
+}
+
+.auth_policies a {
+        margin-left: 1rem;
+}
+
+.auth_policies a:hover {
+        color: black;
+}
+
+.switch_auth_method a {
+        color: var(--main-color);
+}
+
+.copyright_text {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin-right: 1rem;
+        font-size: 11px;
+        color: #999;
+        z-index: 0;
+}
+
+/* ============= LOADING BAR =============== */
+.line_loading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2.5px;
+        overflow: hidden;
+        border-radius: 4px 4px 0px 0px;
+}
+
+.line_loading::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0px;
+        width: 200px;
+        height: 4px;
+        background-color: var(--main-color);
+        -webkit-animation: loading 21 linear infinite;
+        animation: loading 2s ease-out infinite;
+}
+
+/* ======== INFORMATIONS ================== */
+.auth_info {
+        text-align: center;
+        min-height: 30vh !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+}
+
+.check_mark_valid_wrapper {
+        width: 8rem;
+        height: 8rem;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: none;
+}
+
+.check_mark_valid {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        background-color: var(--main-green);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+}
+
+.verify_user_email_page .check_mark_valid {
+        background-color: #1f6bf78e;
+}
+
+.verify_user_email_page .check_mark_inner {
+        background-color: #1F6BF7;
+}
+
+.fee_payment_page .check_mark_valid.failed,
+.verify_user_email_page .check_mark_valid.failed {
+        background-color: #ff4a7d8e;
+}
+
+.fee_payment_page .check_mark_inner.failed,
+.verify_user_email_page .check_mark_inner.failed {
+        background-color: #ff4a7d;
+}
+
+.count_down_verify_email {
+        font-weight: 700;
+        font-size: 1.1em;
+        margin-left: 0.5rem;
+}
+
+.check_mark_inner {
+        background-color: var(--sec-green);
+        width: 50%;
+        height: 50%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.check_mark_icon * {
+        color: #fff;
+        font-size: 1.2rem;
+}
+
+.check_mark_inner.resetInfo {
+        background-color: goldenrod;
+}
+
+.check_mark_valid.resetInfo {
+        background-color: gold;
+}
+
+.verifying_email_user_loading {
+        width: 90%;
+        margin: auto;
+        padding-block: 1rem;
+}
+
+.verifying_email_user_loading * {
+        stroke: #000;
+}
+
+.verifying_email_user_loading svg {
+        float: right;
+}
+
+
+/* =========== CHANGE SCHOOL LOGIN MODAL =========== */
+.change_school_login_modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(221, 221, 221, 0.664);
+        z-index: 1001;
+        background-blend-mode: overlay;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.change_school_login_content {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px #00000017;
+        padding: 2rem 3rem;
+        width: 90%;
+        max-width: 35rem;
+}
+
+.change_school_login_content_title {
+        text-align: center;
+        font-weight: 600;
+        margin-top: 1.2rem;
+        font-size: 2rem !important;
+        color: #3C6EFB;
+}
+
+.close_school_login_modal {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        margin: 1rem;
+        background-color: crimson;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+}
+
+.close_school_login_modal:hover {
+        background-color: #ff4a7d;
+}
+
+@keyframes loading {
+        0% {
+                left: -200px;
+                width: 10%;
+        }
+
+        40% {
+                width: 50%;
+        }
+
+        50% {
+                width: 40%;
+        }
+
+        100% {
+                left: 100%;
+                width: 10%
+        }
+}
+
+@media(min-width: 50rem) {
+        .authenticate_form {
+                padding: 3rem;
+                margin-block: 1rem;
+        }
+}
+
+@media(max-width: 50rem) {
+        .authenticate {
+                padding-top: 6rem;
+                padding-bottom: 3rem;
+                height: 110%;
+        }
+}

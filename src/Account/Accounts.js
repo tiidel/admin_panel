@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useState } from 'react'
 import { HiChevronDown } from 'react-icons/hi2'
 import { Link, useLocation } from 'react-router-dom'
 import { GrChapterNext, GrChapterPrevious } from "react-icons/gr";
@@ -7,6 +7,7 @@ import { GrChapterNext, GrChapterPrevious } from "react-icons/gr";
 // import { getRequest } from '../../../api/Request'
 import { UserList } from './UserList'
 import { ReactComponent as CircularLoader } from '../assets/svg/CircularLoader.svg'
+import { getRequest } from '../api/api';
 
 const Accounts = () => {
     const [showfilter, setShowfilter] = useState(false)
@@ -15,24 +16,25 @@ const Accounts = () => {
 
     const location = useLocation()
     
-    // useLayoutEffect(() => {
-	// 	fetchUsers()
-	// }, [location]);
+   
 
-    // const fetchUsers = async () => {
-	// 	setIsloading(true)
-	// 	let response;
-	// 	let category_id = location.state?.dir
-	// 	if(location.search) {
-    //         response = await getRequest(`/adegory_id}`)
-    //     } 
-    //     else {
-    //         response = await getRequest('/admin/?limit=30')
-    //     }
+    useEffect(() => {
+      fetch_users()
+    }, [])
 
-    //     console.log('user list', response);
-	// 	response.status === 200 && saveData(response.data)
-	// }
+
+    const fetch_users = async () => {
+        setIsloading(true)
+        let response = await getRequest('/auth/users/')
+        console.log(response);
+        
+        if(response.status === 200) {
+            setuserList(response.data)
+            // saveData(response.data)
+        }
+        setIsloading(false)
+    }
+    
 
    
     const filter = (filter_param) => {
@@ -72,15 +74,15 @@ const Accounts = () => {
             </div>
         </section>
 
-        <table className='book_list'>
+        <table className=''>
             <thead>
                 <tr className='list_item'>
                     <th className='list_row'>Full Name</th>
                     <th className='list_row'>User email</th>
+                    <th className='list_row'>Phone Number</th>
                     <th className='list_row'>Company</th>
-                    <th className='list_row'>Account Active</th>
-                    <th className='list_row'>Verification</th>
-                    <th className='list_row'>Phone</th>
+                    <th className='list_row'>Last Activity</th>
+                    <th className='list_row'>Address</th>
                     <th className='list_row'>Nationality</th>
                 </tr>
             </thead>
