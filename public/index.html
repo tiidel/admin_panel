@@ -5,39 +5,45 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    
+    <link rel="icon" type="image/png" href="%PUBLIC_URL%/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.svg" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    
+    <meta name="description" content="Tiidel Investment App helps you invest in stocks, and more with ease. Our admin panel is 100% secure and allows you to manage your investments with ease.">
+    <meta name="keywords" content="Tiidel, Tidel investment app, Tidal investment app, secure investment app, mobile investment app, stock investment, bonds, fractional investing, investing for beginners, best investment app, easy investment app, investment portfolio, invest in stocks, Tiidel app, Tidel stocks, Tiidel bonds, Tiidel portfolio, stock market investment, Tiidel wealth management, Tiidel financial security, Tidel app download, Tidal investing, Tiidel mobile investing">
+
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Tiidel Investment App - Secure, Easy, and Profitable Investing in Stocks, Bonds, & More</title>
   </head>
   <body>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Tiidel Investment App",
+        "url": "https://www.tiidel.com",
+        "description": "Tiidel Investment App - Invest in stocks, bonds, mutual funds, and more with ease. Start your investment journey today.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.tiidel.com/search?q={search_term}",
+          "query-input": "required name=search_term"
+        },
+        "sameAs": [
+          "https://www.facebook.com/TiidelInvestments",
+          "https://twitter.com/TiidelInvest",
+          "https://www.linkedin.com/company/tiidel"
+        ]
+      }
+      </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    
   </body>
 </html>

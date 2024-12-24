@@ -5,6 +5,8 @@ import Sidebar from '../includes/sidebar/Sidebar';
 import Nav from '../includes/nav/Nav';
 import Dashboard from '../Dashboard/Dashboard';
 import Accounts from '../Account/Accounts';
+import Organizations from '../organization/Organizations';
+import OrganizationDashboard from '../org_dashboard/OrganizationDashboard';
 
 const AdminApp = () => {
     const [logoutModal, setLogoutModal] = useState(false);
@@ -27,6 +29,8 @@ const AdminApp = () => {
           <Routes>
 
             <Route path='/users' element={<Accounts />} />
+            <Route path='/organizations' element={<Organizations />} />
+            <Route path='/organization/:id' element={<OrganizationDashboard />} />
 
             <Route path='/' element={<Dashboard />} />
           </Routes>

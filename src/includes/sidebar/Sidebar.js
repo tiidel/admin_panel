@@ -45,10 +45,10 @@ const Sidebar = ({ handleRemoveAuthModal }) => {
             <span className='dashboard_arrow'><HiChevronRight /></span>
         </div>
         
-        <div className='dashboard_element'>
+        <Link to='/organizations' className='dashboard_element'>
             <span className='dashboard_icon'><GiBookshelf /></span>
             <span className='dashboard_text'>Organizations</span>
-        </div>
+        </Link>
         
         <div className='dashboard_element'>
             <span className='dashboard_icon'><RxDownload /></span>

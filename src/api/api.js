@@ -39,7 +39,6 @@ const BASEURL = 'http://localhost:8000/api/v1'
 
 
 export const getRequest = async(endpoint) => {
-    console.log('config', configGlobal);
     
     try {
         const response = await axios.get(`${BASEURL}${endpoint}`, configGlobal)
