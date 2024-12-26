@@ -5,6 +5,7 @@ import './OrganizationDashboard.css';
 import StyledCharts from './styledCharts';
 import { getRequest } from '../api/api';
 import { useParams } from 'react-router';
+import DocumentCardGrid from './components/documents/DocumentCardGrid';
 
 const Modal = ({ isOpen, onClose, children, title }) => {
   if (!isOpen) return null;
@@ -155,6 +156,11 @@ const showGraphs = (type) => {
     </div>
   );
 
+  const renderCompanyDocuments = () => (
+    <div className='company-documents'>
+      <h2 className="section-title">Organization Documents</h2>
+    </div>
+  )
   return (
     <div className="dashboard-container">
       
@@ -202,7 +208,7 @@ const showGraphs = (type) => {
 
       <div className="tabs">
         <div className="tab-list">
-          {['investors', 'financial', 'customer'].map((tab) => (
+          {['investors', 'financial', 'customer', 'Documents'].map((tab) => (
             <button
               key={tab}
               className={`tab ${activeTab === tab ? 'active' : ''}`}
@@ -215,6 +221,8 @@ const showGraphs = (type) => {
 
         <div className="tab-content">
           {activeTab === 'investors' && renderTable()}
+          {activeTab === 'Documents' && <DocumentCardGrid />}
+          {/* {activeTab === 'Documents' && renderCompanyDocuments()} */}
         </div>
       </div>
 
